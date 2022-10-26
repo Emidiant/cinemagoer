@@ -34,7 +34,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import re
 
-from imdb.utils import analyze_name
+from cinemagoer.imdb.utils import analyze_name
 
 from .movieParser import DOMHTMLNewsParser, DOMHTMLOfficialsitesParser, DOMHTMLTechParser
 from .piculet import Path, Rule, Rules, transformers

@@ -28,9 +28,9 @@ from copy import copy, deepcopy
 from functools import total_ordering
 from time import strftime, strptime
 
-from imdb import linguistics
-from imdb._exceptions import IMDbParserError
-from imdb._logging import imdbpyLogger
+from cinemagoer.imdb import linguistics
+from cinemagoer.imdb._exceptions import IMDbParserError
+from cinemagoer.imdb._logging import imdbpyLogger
 
 PY2 = sys.hexversion < 0x3000000
 
@@ -1189,10 +1189,10 @@ class _Container(object):
             self.keys_tomodify[item] = None
         self._roleIsPerson = roleIsPerson
         if not roleIsPerson:
-            from imdb.Character import Character
+            from cinemagoer.imdb.Character import Character
             self._roleClass = Character
         else:
-            from imdb.Person import Person
+            from cinemagoer.imdb.Person import Person
             self._roleClass = Person
         self.currentRole = currentRole
         if roleID:

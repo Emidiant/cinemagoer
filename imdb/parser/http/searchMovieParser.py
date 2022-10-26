@@ -27,7 +27,7 @@ http://www.imdb.com/find?q=the+passion&s=tt
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from imdb.utils import analyze_title
+from cinemagoer.imdb.utils import analyze_title
 
 from .piculet import Path, Rule, Rules, reducers
 from .utils import DOMParserBase, analyze_imdbid

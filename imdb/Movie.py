@@ -23,8 +23,8 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 from copy import deepcopy
 
-from imdb import linguistics
-from imdb.utils import _Container, analyze_title, build_title, canonicalTitle, cmpMovies, flatten
+from cinemagoer.imdb import linguistics
+from cinemagoer.imdb.utils import _Container, analyze_title, build_title, canonicalTitle, cmpMovies, flatten
 
 
 class Movie(_Container):
