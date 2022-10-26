@@ -38,11 +38,11 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import functools
 import re
 
-from imdb import PY2, imdbURL_base
-from imdb.Company import Company
-from imdb.Movie import Movie
-from imdb.Person import Person
-from imdb.utils import KIND_MAP, _Container
+from cinemagoer.imdb import PY2, imdbURL_base
+from cinemagoer.imdb.Company import Company
+from cinemagoer.imdb.Movie import Movie
+from cinemagoer.imdb.Person import Person
+from cinemagoer.imdb.utils import KIND_MAP, _Container
 
 from .piculet import Path, Rule, Rules, preprocessors, transformers
 from .utils import DOMParserBase, analyze_imdbid, build_movie, build_person

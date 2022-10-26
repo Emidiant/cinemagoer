@@ -31,10 +31,10 @@ import ssl
 import warnings
 from codecs import lookup
 
-from imdb import PY2, IMDbBase
-from imdb._exceptions import IMDbDataAccessError, IMDbParserError
-from imdb.parser.http.logging import logger
-from imdb.utils import analyze_title
+from cinemagoer.imdb import PY2, IMDbBase
+from cinemagoer.imdb._exceptions import IMDbDataAccessError, IMDbParserError
+from cinemagoer.imdb.parser.http.logging import logger
+from cinemagoer.imdb.utils import analyze_title
 
 from . import (
     companyParser,

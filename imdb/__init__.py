@@ -22,7 +22,7 @@ the IMDb web pages, or a SQL database.
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from imdb.version import __version__
+from cinemagoer.imdb.version import __version__
 
 __all__ = ['Cinemagoer', 'IMDb', 'IMDbError', 'Movie', 'Person', 'Character', 'Company',
            'available_access_systems']
@@ -35,10 +35,10 @@ import sys
 from pkgutil import find_loader
 from types import FunctionType, MethodType
 
-from imdb import Character, Company, Movie, Person
-from imdb._exceptions import IMDbDataAccessError, IMDbError
-from imdb._logging import imdbpyLogger as _imdb_logger
-from imdb.utils import build_company_name, build_name, build_title
+from cinemagoer.imdb import Character, Company, Movie, Person
+from cinemagoer.imdb._exceptions import IMDbDataAccessError, IMDbError
+from cinemagoer.imdb._logging import imdbpyLogger as _imdb_logger
+from cinemagoer.imdb.utils import build_company_name, build_name, build_title
 
 PY2 = sys.hexversion < 0x3000000
 

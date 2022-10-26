@@ -27,7 +27,7 @@ http://www.imdb.com/find?q=Columbia+Pictures&s=co
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from imdb.utils import analyze_company_name
+from cinemagoer.imdb.utils import analyze_company_name
 
 from .piculet import Path, Rule, Rules, reducers
 from .searchMovieParser import DOMHTMLSearchMovieParser
