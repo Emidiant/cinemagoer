@@ -723,14 +723,19 @@ class IMDbBase:
         #      subclass, somewhere under the imdb.parser package.
         raise NotImplementedError('override this method')
 
-    def get_top50_movies_by_genres(self, genres):
+    def get_top50_movies_by_genres(self, genres, start=0):
         """Return the list of the top 50 movies by genres.
 
         :sig: (Union[str, List[str]]) -> List
-        :param genres: Name genre or list of genre's names."""
+        :param genres: Name genre or list of genre's names
+        :param start: Start offset 51, 101, 151
+        """
         if isinstance(genres, list):
             genres = ','.join(map(str, genres))
-        movies_filter = '&title_type=feature'
+        if start == 0:
+            movies_filter = f'&title_type=feature'
+        else:
+            movies_filter = f'&title_type=feature&start={start}'
         res = self._get_top_movies_or_tv_by_genres(genres, movies_filter)
         return [Movie.Movie(movieID=self._get_real_movieID(mi),
                             data=md, modFunct=self._defModFunct,
